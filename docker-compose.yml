@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  your-app:
+    build: .  # Assuming your Dockerfile is inside the app directory
+    ports:
+      - "3111:3111"  # Exposing the port on which your app runs
+    volumes:
+      - ./app:/app  # Mounting the app directory into the container
+    env_file:
+      - ./.env
+      
